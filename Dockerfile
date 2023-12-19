@@ -8,5 +8,7 @@ RUN npm ci
 
 COPY . .
 
+EXPOSE 3001
+
 # RUN FOR DEV MODE
 CMD [ "npm", "run", "dev" ]
