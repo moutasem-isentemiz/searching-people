@@ -1,6 +1,6 @@
 ## Getting Started
 
-First, run the development server:
+First, run:
 
 ```bash
 docker-compose up -d --build
