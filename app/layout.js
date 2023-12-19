@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className='container max-w-[750px] mx-auto mt-20 flex flex-col gap-y-6 px-2'>{children}</div>
+        <div className='container mx-auto mt-20 flex max-w-[750px] flex-col gap-y-6 px-2'>{children}</div>
       </body>
     </html>
   );
