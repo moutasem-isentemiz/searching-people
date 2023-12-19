@@ -1,0 +1,100 @@
+[
+  {
+    "id": "00Do0000000bssxEAAa2L3l000002oFOQEA2",
+    "name": "Aykut Firat",
+    "title": "Chief Data Scientist",
+    "skills": "Python, R, SQL, Machine Learning, Deep Learning, NLP",
+    "metadata": {
+      "social_media": {
+        "linkedin": "linkedin.com/aykut-firat",
+        "github": "github.com/aykut-firat",
+        "slack": "slack.com/aykut-firat",
+        "twitter": "twitter.com/aykut-firat",
+        "teams": "teams.com/aykut-firat",
+        "email": "aykut.firat@simpplr.com"
+      },
+      "about": "I lived my early life crossing from Europe to Asia and back in Istanbul. In 1996 I came to US, and have lived most of my life in Cambridge, MA. \\n\\nI believe in Clarke's three laws, but especially the third one:\\n\\n\\t1. When a distinguished but elderly scientist states that something is possible, they are almost certainly right. When they state that something is impossible, they are very probably wrong.\\n\\t2. The only way of discovering the limits of the possible is to venture a little way past them into the impossible.\\n\\t3. Any sufficiently advanced technology is indistinguishable from magic.\\n\\nSo I consider myself a data illusionist. I like to combine different data, models, code to create a magical effect, even if the individual pieces may look mundane.\\n\\nApart from card tricks, I like to watch European soccer, play blitz chess and feel invigorated with BBC Hard-talk kind of discussions. I love to spend time in nature and  hike in White mountains with my daughter Elsa. With precise attention to detail and Kaizen I bake croissants, simits, cheesecakes, and boreks.",
+      "reports_to": {
+        "id": "00Do0000000bssxEAAa2L3l000002oFQ2EAM",
+        "name": "Parag Kulkarni",
+        "title": "Chief Technology Officer"
+      },
+      "direct_reports": [
+        {
+          "id": "00Do0000000bssxEAAa2L3l000002oHL5EAM",
+          "name": "tarik altuncu",
+          "title": "data scientist"
+        },
+        {
+          "id": "00Do0000000bssxEAAa2L3l000002ng2FEAQ",
+          "name": "mahir kukreja",
+          "title": "senior data scientist"
+        },
+        {
+          "id": "00Do0000000bssxEAAa2L3l000002s5RkEAI",
+          "name": "rishabh ahuja",
+          "title": "senior data scientist"
+        },
+        {
+          "id": "00Do0000000bssxEAAa2L3l000002s3mNEAQ",
+          "name": "abdurrahman beyaz",
+          "title": "data scientist"
+        },
+        {
+          "id": "00Do0000000bssxEAAa2L3l000002s2NPEAY",
+          "name": "achintya shankhdhar",
+          "title": "data scientist"
+        }
+      ],
+      "team": "Data Science"
+    }
+  },
+  {
+    "id": "00Do0000000bssxEAAa2L3l000002oHL5EAM",
+    "name": "Tarik Altuncu",
+    "title": "Data Scientist",
+    "skills": "Python, R, SQL, Machine Learning, Deep Learning, NLP",
+    "metadata": {
+      "social_media": {
+        "linkedin": "linkedin.com/tarik-altuncu",
+        "github": "github.com/tarik-altuncu",
+        "slack": "slack.com/tarik-altuncu",
+        "twitter": "twitter.com/tarik-altuncu",
+        "teams": "teams.com/tarik-altuncu",
+        "email": "tarik.altuncu@simpplr.com"
+      },
+      "about": "After having engineering, finance and applied mathematics degrees and different roles in telecommunications, digital media, news and entertainment industries; I am excited to start here at Simpplr. \\n\\nMy primary professional interest is development and deployment of machine learning applications using complex data. My skills and experience cover a wide range of data science activities from modelling & deployment of machine learning models with shallow and deep learning methods; to engineering API aggregation and ETL pipeline of big data. In particular, I am interested in recommender systems, knowledge graphs, complex networks, natural language processing, and computational social sciences. I am currently focused on the digital footprint of media/entertainment audiences through mobile applications, but I also have worked on social media data, electronic healthcare records (EHR), geospatial data, call data records (CDR), and text corpora.\\n\\nExcept for the four years that I spent in London to pursue my PhD, I live in İstanbul with a nice view from my balcony looking at the Prince's Islands from Çamlıca. What I miss most about London is my daily commute passing Hyde Park end to end on my bike. I still cycle rarely in the hilly forests of Şile. Other than cycling, I like gardening, DIY projects and programming my own digital life.",
+      "reports_to": {
+        "id": "00Do0000000bssxEAAa2L3l000002oFOQEA2",
+        "name": "Aykut Firat",
+        "title": "Chief Data Scientist"
+      },
+      "direct_reports": [],
+      "team": "Data Science"
+    }
+  },
+  {
+    "id": "00Do0000000bssxEAAa2L3l000002s3mNEAQ",
+    "name": "Abdurrahman Beyaz",
+    "title": "Data Scientist",
+    "skills": "Python, R, SQL, Machine Learning, Deep Learning, NLP",
+    "metadata": {
+      "social_media": {
+        "linkedin": "linkedin.com/abdurrahman-beyaz",
+        "github": "github.com/abdurrahman-beyaz",
+        "slack": "slack.com/abdurrahman-beyaz",
+        "twitter": "twitter.com/abdurrahman-beyaz",
+        "teams": "teams.com/abdurrahman-beyaz",
+        "email": "abdurrahman.beyaz@simpplr.com"
+      },
+      "about": "Native in Arabic, near-native Turkish and fluent in English. Abdurrahman has been working in ML/DL/NLP field since 2018.\\nMSc. Computer Science & Engineering @Koc University",
+      "reports_to": {
+        "id": "00Do0000000bssxEAAa2L3l000002oFOQEA2",
+        "name": "Aykut Firat",
+        "title": "Chief Data Scientist"
+      },
+      "direct_reports": [],
+      "team": "Data Science"
+    }
+  }
+]

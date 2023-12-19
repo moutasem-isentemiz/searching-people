@@ -1,0 +1,10 @@
+version: "3"
+services:
+  searching-people:
+    image: searching-people
+    container_name: searching-people
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3000:3000
