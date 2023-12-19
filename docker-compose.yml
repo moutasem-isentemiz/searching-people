@@ -4,8 +4,9 @@ services:
     image: searching-people
     container_name: searching-people
     build: .
-    volumes:
-      - .:/usr/src/app
+    # volumes:
+      # - .:/usr/src/app
+      # - /node_modules
     ports:
       - 3000:3000
       - 3001:3001
