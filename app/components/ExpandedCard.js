@@ -142,77 +142,26 @@ export default function ExpandedCard({ data, onClose }) {
           {/* Direct Reports */}
           {data.metadata.direct_reports.length ? (
             <div>
-              <h6 className='pb-4 text-sm font-medium text-gray-200'>Direct Reports</h6>
-              <div className='flex  items-start gap-x-4'>
-                <div className='relative h-10 w-10 overflow-hidden rounded-full'>
-                  <Image
-                    src={`https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg`}
-                    layout='fill'
-                    objectFit='cover'
-                    alt='profile image'
-                  />
+              <h6 className='pb-4 text-sm font-medium text-gray-200'>
+                Direct Reports
+                <span className='text-xs text-gray-500 '> ({data.metadata.direct_reports.length})</span>
+              </h6>
+              {data.metadata.direct_reports.map((di) => (
+                <div key={di.name} className='flex  items-start gap-x-4'>
+                  <div className='relative h-10 w-10 overflow-hidden rounded-full'>
+                    <Image
+                      src={`https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg`}
+                      layout='fill'
+                      objectFit='cover'
+                      alt='profile image'
+                    />
+                  </div>
+                  <div className='w-fit text-left'>
+                    <h6 className='text-base font-medium text-indigo-500 '>{di.name}</h6>
+                    <p className='pb-2 font-thin text-zinc-400'>{di.title}</p>
+                  </div>
                 </div>
-                <div className='w-fit text-left'>
-                  <h6 className='text-base font-medium text-indigo-500 '>Abdulrahman Beyaz</h6>
-                  <p className='pb-2 font-thin text-zinc-400'>Data Scientist</p>
-                </div>
-              </div>
-              <div className='flex  items-start gap-x-4'>
-                <div className='relative h-10 w-10 overflow-hidden rounded-full'>
-                  <Image
-                    src={`https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg`}
-                    layout='fill'
-                    objectFit='cover'
-                    alt='profile image'
-                  />
-                </div>
-                <div className='w-fit text-left'>
-                  <h6 className='text-base font-medium text-indigo-500 '>Abdulrahman Beyaz</h6>
-                  <p className='pb-2 font-thin text-zinc-400'>Data Scientist</p>
-                </div>
-              </div>
-              <div className='flex  items-start gap-x-4'>
-                <div className='relative h-10 w-10 overflow-hidden rounded-full'>
-                  <Image
-                    src={`https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg`}
-                    layout='fill'
-                    objectFit='cover'
-                    alt='profile image'
-                  />
-                </div>
-                <div className='w-fit text-left'>
-                  <h6 className='text-base font-medium text-indigo-500 '>Abdulrahman Beyaz</h6>
-                  <p className='pb-2 font-thin text-zinc-400'>Data Scientist</p>
-                </div>
-              </div>
-              <div className='flex  items-start gap-x-4'>
-                <div className='relative h-10 w-10 overflow-hidden rounded-full'>
-                  <Image
-                    src={`https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg`}
-                    layout='fill'
-                    objectFit='cover'
-                    alt='profile image'
-                  />
-                </div>
-                <div className='w-fit text-left'>
-                  <h6 className='text-base font-medium text-indigo-500 '>Abdulrahman Beyaz</h6>
-                  <p className='pb-2 font-thin text-zinc-400'>Data Scientist</p>
-                </div>
-              </div>
-              <div className='flex  items-start gap-x-4'>
-                <div className='relative h-10 w-10 overflow-hidden rounded-full'>
-                  <Image
-                    src={`https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg`}
-                    layout='fill'
-                    objectFit='cover'
-                    alt='profile image'
-                  />
-                </div>
-                <div className='w-fit text-left'>
-                  <h6 className='text-base font-medium text-indigo-500 '>Abdulrahman Beyaz</h6>
-                  <p className='pb-2 font-thin text-zinc-400'>Data Scientist</p>
-                </div>
-              </div>
+              ))}
             </div>
           ) : (
             <></>
