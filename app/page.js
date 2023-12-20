@@ -1,39 +1,35 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import Card from './components/Card';
 import ExpandedCard from './components/ExpandedCard';
 import Input from './components/Input';
-import Card from './components/Card';
 
-const fetchUsers = async () => {
-  return await fetch(`http://localhost:3001/users`, {
-    method: 'GET',
+const fetchUsers = async (q) => {
+  return await fetch(`http://54.145.233.88:7000/v1/ai-ppl-search/ppl-search`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ question: q }),
   });
 };
 
 export default function Home() {
-  const [users, setUsers] = useState([]);
   const [cards, setCards] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
 
-  const handleFilter = (event) => {
-    if (event.target.value.toLowerCase() === '') {
-      setCards([]);
-    } else {
-      const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(event.target.value.toLowerCase()));
-      setCards(filteredUsers);
-    }
+  const handleFilter = async (value) => {
+    const response = await fetchUsers(value);
+
+    const data = await response.json();
+
+    setCards(!!data ? data?.users : []);
   };
 
   useEffect(() => {
-    fetchUsers()
-      .then((res) => res.json())
-      .then((users) => setUsers(users));
-  }, []);
-
-  useEffect(() => {
-    console.log(users);
-  }, [users]);
+    console.log(cards);
+  }, [cards]);
 
   return (
     <>
