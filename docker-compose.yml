@@ -6,8 +6,6 @@ services:
     environment:
       - API_BASE_URL=YOUR_API_BASE_URL_HERE
     build: .
-    volumes:
-      - .:/usr/src/app
     ports:
       - 3000:3000
       - 3001:3001
