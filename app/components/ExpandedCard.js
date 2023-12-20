@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+
 export default function ExpandedCard({ data, onClose }) {
+  const [showmore, setShowMore] = useState(false);
+
   return (
     <>
       <span className='ms-14 cursor-pointer text-xl' onClick={() => onClose()}>
@@ -100,8 +104,21 @@ export default function ExpandedCard({ data, onClose }) {
           <div>
             <h6 className='pb-2 text-sm font-medium text-gray-200'>About</h6>
             <p className='text-cl text-sm text-gray-300/70'>
-              Native in Arabic, near-native Turkish and fluent in English. Abdurrahman has been working in ML/DL/NLP field since 2018.\nMSc.
-              Computer Science & Engineering @Koc University
+              {!showmore ? (
+                <>
+                  {data.metadata.about.slice(0, 500)}...
+                  <span className='cursor-pointer text-xs text-gray-500 hover:underline-offset-0' onClick={() => setShowMore(true)}>
+                    &nbsp; show more
+                  </span>
+                </>
+              ) : (
+                <>
+                  {data.metadata.about}
+                  <span className='cursor-pointer text-xs text-gray-500 hover:underline-offset-0' onClick={() => setShowMore(false)}>
+                    &nbsp;show less
+                  </span>
+                </>
+              )}
             </p>
           </div>
           {/* Reports to */}
