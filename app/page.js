@@ -24,20 +24,29 @@ export default function Home() {
 
     const data = await response.json();
 
+    setSelectedUser(null);
     setCards(!!data ? data?.users : []);
   };
 
-  useEffect(() => {
-    console.log(cards);
-  }, [cards]);
+  const handleCardClick = (user) => {
+    setSelectedUser(user);
+  };
+
+  const handleClose = () => {
+    setSelectedUser(null);
+  };
+
+  // useEffect(() => {
+  //   console.log(cards);
+  // }, [cards]);
 
   return (
     <>
       <Input onChange={handleFilter} />
       {selectedUser ? (
-        <ExpandedCard data={selectedUser} />
+        <ExpandedCard data={selectedUser} onClose={handleClose} />
       ) : (
-        cards.map((user) => <Card key={user.id} data={user} onClick={() => handleCardClick(user)} />)
+        cards.map((user) => <Card key={user.id} data={user} onClick={handleCardClick} />)
       )}
     </>
   );
