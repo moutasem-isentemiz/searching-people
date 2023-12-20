@@ -6,7 +6,7 @@ import ExpandedCard from './components/ExpandedCard';
 import Input from './components/Input';
 
 const fetchUsers = async (q) => {
-  return await fetch(`http://54.145.233.88:7000/v1/ai-ppl-search/ppl-search`, {
+  return await fetch(process.env.PUBLIC_SERVER_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
