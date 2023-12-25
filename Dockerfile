@@ -9,6 +9,3 @@ COPY . .
 RUN npm ci 
 
 EXPOSE 3001
-
-# RUN FOR DEV MODE
-CMD [ "npm", "run", "dev" ]

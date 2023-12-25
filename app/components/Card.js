@@ -20,7 +20,7 @@ export default function Card({ data, onClick }) {
         </div>
       </div>
       <div className='h-full bg-zinc-900 px-6 py-2'>
-        <p className='text-md text-zinc-600 '>Knows about</p>
+        <p className='text-md text-zinc-600 '>Qualified In</p>
         <p className='text-sm text-zinc-400'>{data.skills}</p>
       </div>
     </div>

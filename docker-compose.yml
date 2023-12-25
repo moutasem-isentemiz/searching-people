@@ -4,8 +4,34 @@ services:
     image: searching-people
     container_name: searching-people
     environment:
-      - API_BASE_URL=YOUR_API_BASE_URL_HERE
+      - API_BASE_URL=<ip>
     build: .
+    networks:
+        - frontend
     ports:
       - 3000:3000
-      - 3001:3001
+    
+    command: [ "npm", "run", "dev" ]
+
+  
+  # db-searching-people:
+  #   image: searching-people
+  #   container_name: db-searching-people
+  #   build: .
+  #   # volumes:
+  #     # - .:/usr/src/app
+  #     # - /node_modules
+  #   networks:
+  #       - frontend
+  #   depends_on:
+  #     - searching-people
+  #   ports:
+  #     - 3001:3001
+  #   command: ["npx","json-server","--watch","db.json","--port","3001","-H","0.0.0.0"]
+
+
+
+networks:
+    frontend:
+        driver: bridge
+
