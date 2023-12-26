@@ -62,8 +62,8 @@ export default function ExpandedCard({ data, onClose }) {
 
               <span className={`font-thin text-zinc-200 ps-6 ${data.score <= 40 ? 'text-green-500' : data.score <= 70 ? 'text-yellow-500' : 'text-red-500'}`}>{data.score}</span>
             </span>
-            <p className='pb-2 font-thin text-zinc-400'>{data.title}</p>
-
+            <p className='font-thin text-zinc-400'>{data.title}</p>
+            <p className='font-thin text-zinc-400'>{data.country}</p>
             <p className='inline-flex items-center gap-2 pb-2 text-sm text-indigo-400'>
               <svg xmlns='http://www.w3.org/2000/svg' height='16' width='16' viewBox='0 0 512 512'>
                 <path
@@ -136,7 +136,7 @@ export default function ExpandedCard({ data, onClose }) {
         {/* Collaborations */}
         <div>
             <h6 className='pb-4 text-sm font-medium text-gray-200'>Collaborations Instances</h6>
-            <div className='flex items-center gap-x-2'>
+            <div className='flex items-center gap-x-2 mb-4'>
               <Link href={data.metadata.collaborations.github.link} target='_blank'>
                 <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='github'>
                   <Image
@@ -200,8 +200,7 @@ export default function ExpandedCard({ data, onClose }) {
               </Link>
             </div>
 
-          <br></br>
-          </div>
+        </div>
 
         {/* About part */}
         <div className='flex flex-col gap-y-4'>
