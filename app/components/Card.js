@@ -17,6 +17,42 @@ export default function Card({ data, onClick }) {
         <div className='w-fit text-left'>
           <h6 className='text-base font-medium text-indigo-500 '>{data.name}</h6>
           <p className='font-thin text-zinc-400'>{data.title}</p>
+          <p className='font-thin text-zinc-400'>{data.country}</p>
+          
+          <span className='relative h-[20px] w-[20px] inline-flex gap-2'>
+          {
+  data.score<=40?
+            (
+              <Image
+              src={`https://cdn-icons-png.flaticon.com/512/3563/3563393.png`}
+              layout='fill'
+              objectFit='cover'
+              alt='profile image'
+            />  
+            )
+            :
+  data.score<=70?
+            (
+              <Image
+              src={`https://cdn-icons-png.flaticon.com/512/3563/3563394.png`}
+              layout='fill'
+              objectFit='cover'
+              alt='profile image'
+            />  
+            )
+            :
+            (
+              <Image
+              src={`https://cdn-icons-png.flaticon.com/512/3563/3563395.png`}
+              layout='fill'
+              objectFit='cover'
+              alt='profile image'
+            />  
+            )
+      }     
+        
+          <span className={`font-thin text-zinc-200 ps-6 ${data.score<=40?'text-green-500':data.score<=70?'text-yellow-500':'text-red-500'}`}>{data.score}</span>
+          </span>
         </div>
       </div>
       <div className='h-full bg-zinc-900 px-6 py-2'>

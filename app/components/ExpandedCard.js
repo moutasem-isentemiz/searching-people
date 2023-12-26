@@ -28,7 +28,42 @@ export default function ExpandedCard({ data, onClose }) {
           </div>
           <div className='w-fit text-left'>
             <h6 className='text-base font-medium text-indigo-500 '>{data.name}</h6>
+            <span className='relative h-[20px] w-[20px] inline-flex gap-2'>
+              {
+                data.score <= 40 ?
+                  (
+                    <Image
+                      src={`https://cdn-icons-png.flaticon.com/512/3563/3563393.png`}
+                      layout='fill'
+                      objectFit='cover'
+                      alt='profile image'
+                    />
+                  )
+                  :
+                  data.score <= 70 ?
+                    (
+                      <Image
+                        src={`https://cdn-icons-png.flaticon.com/512/3563/3563394.png`}
+                        layout='fill'
+                        objectFit='cover'
+                        alt='profile image'
+                      />
+                    )
+                    :
+                    (
+                      <Image
+                        src={`https://cdn-icons-png.flaticon.com/512/3563/3563395.png`}
+                        layout='fill'
+                        objectFit='cover'
+                        alt='profile image'
+                      />
+                    )
+              }
+
+              <span className={`font-thin text-zinc-200 ps-6 ${data.score <= 40 ? 'text-green-500' : data.score <= 70 ? 'text-yellow-500' : 'text-red-500'}`}>{data.score}</span>
+            </span>
             <p className='pb-2 font-thin text-zinc-400'>{data.title}</p>
+
             <p className='inline-flex items-center gap-2 pb-2 text-sm text-indigo-400'>
               <svg xmlns='http://www.w3.org/2000/svg' height='16' width='16' viewBox='0 0 512 512'>
                 <path
@@ -98,6 +133,76 @@ export default function ExpandedCard({ data, onClose }) {
             </div>
           </div>
         </div>
+        {/* Collaborations */}
+        <div>
+            <h6 className='pb-4 text-sm font-medium text-gray-200'>Collaborations Instances</h6>
+            <div className='flex items-center gap-x-2'>
+              <Link href={data.metadata.collaborations.github.link} target='_blank'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='github'>
+                  <Image
+                    src={`https://cdn-icons-png.flaticon.com/512/733/733609.png?ga=GA1.1.791291719.1703064946`}
+                    width={0}
+                    height={0}
+                    style={{ width: '50%', height: '50%' }}
+                    alt='profile image'
+                  />
+                  <p>{data.metadata.collaborations.github.number_of_collaborations}</p>
+                </span>
+
+              </Link>
+              <Link href={data.metadata.collaborations.jira.link} target='_blank'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='jira'>
+                  <Image
+                    src={`https://cdn-icons-png.flaticon.com/512/5968/5968875.png`}
+                    width={0}
+                    height={0}
+                    style={{ width: '50%', height: '50%' }}
+                    alt='profile image'
+                  />
+                  <p>{data.metadata.collaborations.jira.number_of_collaborations}</p>
+                </span>
+              </Link>
+              <Link href={data.metadata.collaborations.confluence.link} target='_blank'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='confluence'>
+                  <Image
+                    src={`https://cdn-icons-png.flaticon.com/512/5968/5968793.png`}
+                    width={0}
+                    height={0}
+                    style={{ width: '50%', height: '50%' }}
+                    alt='profile image'
+                  />
+                  <p>{data.metadata.collaborations.confluence.number_of_collaborations}</p>
+                </span>
+              </Link>
+              <Link href={data.metadata.collaborations.backyard.link} target='_blank'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='backyard'>
+                  <Image
+                    src={`https://theme.zdassets.com/theme_assets/2229755/6501df32d04196490aee2fb377cf0dbbe2eb6916.png`}
+                    width={0}
+                    height={0}
+                    style={{ width: '50%', height: '50%' }}
+                    alt='profile image'
+                  />
+                  <p>{data.metadata.collaborations.backyard.number_of_collaborations}</p>
+                </span>
+              </Link>
+              <Link href={data.metadata.collaborations.email.link} target='_blank'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='email'>
+                  <Image
+                    src={`https://cdn-icons-png.flaticon.com/512/5968/5968534.png`}
+                    width={0}
+                    height={0}
+                    style={{ width: '50%', height: '50%' }}
+                    alt='profile image'
+                  />
+                  <p>{data.metadata.collaborations.email.number_of_collaborations}</p>
+                </span>
+              </Link>
+            </div>
+
+          <br></br>
+          </div>
+
         {/* About part */}
         <div className='flex flex-col gap-y-4'>
           {/* Title */}
