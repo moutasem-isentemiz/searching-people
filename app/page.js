@@ -12,7 +12,7 @@ const fetchUsers = async (q, s) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ question: q, user: s ?? undefined }),
+    body: JSON.stringify({ question: q, user_name: s ?? undefined }),
   });
 };
 
@@ -20,7 +20,7 @@ export default function Home() {
   const [cards, setCards] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [searchAs, setSearchAs] = useState(null);
-  const searchAsArray = ['Abdurrahman', 'Aykut', 'Meen Sameer'];
+  const searchAsArray = ['abdurrahman.beyaz@simpplr.com', 'aykut.firat@simpplr.com', 'parag.kulkarni@simpplr.com'];
 
   const handleFilter = async (value) => {
     const response = await fetchUsers(value, searchAs);
