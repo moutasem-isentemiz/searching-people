@@ -138,7 +138,7 @@ export default function ExpandedCard({ data, onClose }) {
             <h6 className='pb-4 text-sm font-medium text-gray-200'>Collaborations Instances</h6>
             <div className='flex items-center gap-x-2 mb-4'>
               <Link href={data.metadata.collaborations.github.link} target='_blank'>
-                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='github'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='Number of Repos that users are working together on, this number might be misleading since users might collaborate with non-official emails'>
                   <Image
                     src={`https://cdn-icons-png.flaticon.com/512/733/733609.png?ga=GA1.1.791291719.1703064946`}
                     width={0}
@@ -151,7 +151,7 @@ export default function ExpandedCard({ data, onClose }) {
 
               </Link>
               <Link href={data.metadata.collaborations.jira.link} target='_blank'>
-                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='jira'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='Number of stories that users are working together on, click for more details.'>
                   <Image
                     src={`https://cdn-icons-png.flaticon.com/512/5968/5968875.png`}
                     width={0}
@@ -163,7 +163,7 @@ export default function ExpandedCard({ data, onClose }) {
                 </span>
               </Link>
               <Link href={data.metadata.collaborations.confluence.link} target='_blank'>
-                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='confluence'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='Number of co-author item, click for more details.'>
                   <Image
                     src={`https://cdn-icons-png.flaticon.com/512/5968/5968793.png`}
                     width={0}
@@ -175,7 +175,7 @@ export default function ExpandedCard({ data, onClose }) {
                 </span>
               </Link>
               <Link href={data.metadata.collaborations.backyard.link} target='_blank'>
-                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='backyard'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='Number of interactions (likes, comments, and views) for the last 40 days, click for more details.'>
                   <Image
                     src={`https://theme.zdassets.com/theme_assets/2229755/6501df32d04196490aee2fb377cf0dbbe2eb6916.png`}
                     width={0}
@@ -187,7 +187,7 @@ export default function ExpandedCard({ data, onClose }) {
                 </span>
               </Link>
               <Link href={data.metadata.collaborations.email.link} target='_blank'>
-                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='email'>
+                <span className='inline-flex gap-x-2 h-8 w-8 items-center justify-center rounded-md  bg-zinc-600/50 w-fit px-3' title='Random number.'>
                   <Image
                     src={`https://cdn-icons-png.flaticon.com/512/5968/5968534.png`}
                     width={0}
